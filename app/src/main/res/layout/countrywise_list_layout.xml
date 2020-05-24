@@ -2,41 +2,51 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="45dp"
     app:cardBackgroundColor="@color/colorPrimary"
     android:layout_marginBottom="5dp"
-    app:cardCornerRadius="7dp">
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:weightSum="3"
-        android:padding="7dp">
+        android:layout_gravity="center">
 
-        <ImageView
-            android:id="@+id/countryWiseImage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:maxHeight="18sp"
-            android:minHeight="18sp"
-            android:maxWidth="30sp"
-            android:minWidth="30sp"
-            android:layout_weight="0.5"
-            android:gravity="start"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            app:cardElevation="0dp"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="5dp">
 
+            <ImageView
+                android:id="@+id/countryWiseImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxHeight="30sp"
+                android:minHeight="30sp"
+                android:maxWidth="50sp"
+                android:minWidth="50sp"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:scaleType="fitXY" />
 
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/countryName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:layout_marginLeft="8dp"
             android:textColor="#fff"
             android:layout_weight="1.5"
             android:text="Sample"
             android:gravity="start"
+            android:layout_gravity="center"
             android:ellipsize="end"
             android:lines="1"/>
 
@@ -48,9 +58,12 @@
             android:textSize="15sp"
             android:layout_marginLeft="5dp"
             android:textColor="@color/lightBlue"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
             android:text="Sample"
             android:gravity="start"/>
+
+
 
 
     </LinearLayout>

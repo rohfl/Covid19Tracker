@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -80,8 +80,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         int intActive = Integer.parseInt(active) ;
         active = NumberFormat.getInstance().format(intActive);
         holder.activeCases.setText(active) ;
-        Picasso.with(context).load(url).resize(30, 18).
-                centerCrop().into(holder.imageURL);
+        Glide.with(context).load(url).into(holder.imageURL);
     }
 
     @Override
